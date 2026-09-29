@@ -1,5 +1,5 @@
 import { motion } from 'motion/react'
-import { ArrowRight, PackageCheck, ShieldCheck, Truck } from 'lucide-react'
+import { ArrowRight, PackageCheck, Truck } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import Aurora from '../components/fx/Aurora'
 import Magnetic from '../components/fx/Magnetic'
@@ -11,8 +11,7 @@ import { useFetch } from '../lib/useFetch'
 
 const chips = [
   { icon: PackageCheck, t: 'Live stock counts' },
-  { icon: Truck, t: 'Ships from one warehouse' },
-  { icon: ShieldCheck, t: 'Fitment details on every part' },
+  { icon: Truck, t: 'Order lookup by reference code' },
 ]
 
 export default function Hero() {
