@@ -14,7 +14,7 @@ export function CTA() {
         <h2 className="font-display text-4xl font-bold tracking-tight sm:text-6xl"><SplitText text="Ready to gear up?" /></h2>
         <Reveal delay={0.2}>
           <p className="mx-auto mt-5 max-w-lg text-lg text-zinc-300">Open a free trade account and get 10% off your first order.</p>
-          <div className="mt-9"><Magnetic><a href="#accounts" className="group inline-flex items-center gap-2 rounded-xl bg-white px-7 py-4 font-semibold text-black">Create free account <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" /></a></Magnetic></div>
+          <div className="mt-9"><Magnetic><a href="#accounts" className="group inline-flex items-center gap-2 rounded-xl bg-fg px-7 py-4 font-semibold text-ink">Create free account <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" /></a></Magnetic></div>
         </Reveal>
       </div>
     </section>

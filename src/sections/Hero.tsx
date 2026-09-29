@@ -31,7 +31,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="mb-6 inline-flex items-center gap-2 rounded-full border border-line bg-white/5 px-3 py-1.5 text-xs backdrop-blur"
+            className="mb-6 inline-flex items-center gap-2 rounded-full border border-line bg-fg/5 px-3 py-1.5 text-xs backdrop-blur"
           >
             <span className="relative flex h-2 w-2"><span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" /><span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" /></span>
             <ShinyText>12,480 SKUs in stock · updated live</ShinyText>
@@ -39,7 +39,7 @@ export default function Hero() {
 
           <h1 className="font-display text-5xl font-bold leading-[1.02] tracking-tight sm:text-6xl lg:text-[4.25rem]">
             <SplitText text="Built for people" delay={0.3} />
-            <SplitText text="who build things." charClassName="text-amber" delay={0.7} />
+            <SplitText text="who build things." charClassName="text-amber-ink" delay={0.7} />
           </h1>
 
           <motion.p initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.3, duration: 0.7 }} className="mt-6 max-w-xl text-lg leading-relaxed text-zinc-400">
@@ -53,7 +53,7 @@ export default function Hero() {
               </a>
             </Magnetic>
             <Magnetic strength={0.2}>
-              <a href="#inventory" className="inline-flex items-center gap-2 rounded-xl border border-line bg-white/5 px-6 py-3.5 font-semibold backdrop-blur transition-colors hover:bg-white/10">
+              <a href="#inventory" className="inline-flex items-center gap-2 rounded-xl border border-line bg-fg/5 px-6 py-3.5 font-semibold backdrop-blur transition-colors hover:bg-fg/10">
                 See the dashboard
               </a>
             </Magnetic>
@@ -62,7 +62,7 @@ export default function Hero() {
           <motion.ul initial="h" animate="s" transition={{ staggerChildren: 0.12, delayChildren: 1.8 }} className="mt-12 flex flex-wrap gap-x-8 gap-y-3 text-sm text-zinc-400">
             {chips.map(({ icon: I, t }) => (
               <motion.li key={t} variants={{ h: { opacity: 0, x: -12 }, s: { opacity: 1, x: 0 } }} className="flex items-center gap-2">
-                <I size={16} className="text-amber" /> {t}
+                <I size={16} className="text-amber-ink" /> {t}
               </motion.li>
             ))}
           </motion.ul>
@@ -80,9 +80,9 @@ function HeroCard() {
   return (
     <TiltCard className="relative">
       <motion.div animate={{ y: [0, -10, 0] }} transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
-        className="relative rounded-3xl border border-white/10 bg-gradient-to-b from-white/10 to-white/[0.02] p-6 shadow-2xl shadow-black/60 backdrop-blur-xl">
+        className="relative rounded-3xl border border-fg/10 bg-gradient-to-b from-panel to-panel/60 p-6 shadow-2xl shadow-shade backdrop-blur-xl">
         <div className="mb-5 flex items-center justify-between text-xs text-zinc-400">
-          <span className="rounded-full bg-amber/15 px-2.5 py-1 font-medium text-amber">Best seller</span>
+          <span className="rounded-full bg-amber/15 px-2.5 py-1 font-medium text-amber-ink">Best seller</span>
           <span className="font-mono">SKU VLT-2041</span>
         </div>
         <div className="relative grid aspect-[4/3] place-items-center overflow-hidden rounded-2xl bg-gradient-to-br from-zinc-800 to-zinc-950">
@@ -105,11 +105,11 @@ function HeroCard() {
         </div>
         <div className="mt-4">
           <div className="mb-1.5 flex justify-between text-xs text-zinc-400"><span>In stock</span><span className="font-mono text-emerald-400">42 units</span></div>
-          <div className="h-1.5 overflow-hidden rounded-full bg-white/10">
+          <div className="h-1.5 overflow-hidden rounded-full bg-fg/10">
             <motion.div initial={{ width: 0 }} animate={{ width: '68%' }} transition={{ delay: 1.6, duration: 1.2, ease: 'easeOut' }} className="h-full rounded-full bg-gradient-to-r from-emerald-400 to-amber" />
           </div>
         </div>
-        <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 2.2 }} className="absolute -left-10 top-24 flex items-center gap-2 rounded-xl border border-white/10 bg-ink/80 px-3 py-2 text-xs shadow-xl backdrop-blur">
+        <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 2.2 }} className="absolute -left-10 top-24 flex items-center gap-2 rounded-xl border border-fg/10 bg-ink/80 px-3 py-2 text-xs shadow-xl backdrop-blur">
           <PackageCheck size={14} className="text-emerald-400" /> Order #8841 shipped
         </motion.div>
       </motion.div>

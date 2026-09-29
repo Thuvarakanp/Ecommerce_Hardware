@@ -8,7 +8,7 @@ export default function Brands() {
       <div className="overflow-hidden [mask-image:linear-gradient(to_right,transparent,#000_15%,#000_85%,transparent)]">
         <div className="flex w-max gap-16 pr-16 hover:[animation-play-state:paused]" style={{ animation: 'marquee 30s linear infinite' }}>
           {row.map((b, i) => (
-            <span key={i} className="font-display text-2xl font-bold tracking-wider text-zinc-600 transition-colors hover:text-amber">{b}</span>
+            <span key={i} className="font-display text-2xl font-bold tracking-wider text-zinc-600 transition-colors hover:text-amber-ink">{b}</span>
           ))}
         </div>
       </div>

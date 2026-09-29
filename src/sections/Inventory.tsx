@@ -36,7 +36,7 @@ export default function Inventory() {
       <div className="grid items-center gap-14 lg:grid-cols-[1fr_1.2fr]">
         <div>
           <Reveal>
-            <p className="mb-3 font-mono text-sm text-amber">/ 03 — INVENTORY</p>
+            <p className="mb-3 font-mono text-sm text-amber-ink">/ 03 — INVENTORY</p>
             <h2 className="font-display text-4xl font-bold tracking-tight sm:text-5xl"><SplitText text="Know your stock. Down to the bolt." /></h2>
             <p className="mt-5 text-lg text-zinc-400">The same system that powers the storefront runs your warehouse — so what customers see is always what's on the shelf.</p>
           </Reveal>
@@ -44,7 +44,7 @@ export default function Inventory() {
             {features.map((f, i) => (
               <Reveal key={f.t} delay={i * 0.08}>
                 <li className="list-none">
-                  <f.icon size={20} className="mb-2 text-amber" />
+                  <f.icon size={20} className="mb-2 text-amber-ink" />
                   <p className="font-display font-semibold">{f.t}</p>
                   <p className="mt-1 text-sm text-zinc-400">{f.d}</p>
                 </li>
@@ -54,7 +54,7 @@ export default function Inventory() {
         </div>
 
         <Reveal>
-          <div className="rounded-3xl border border-line bg-panel p-5 shadow-2xl shadow-black/50">
+          <div className="rounded-3xl border border-line bg-panel p-5 shadow-2xl shadow-shade">
             <div className="mb-4 flex items-center justify-between">
               <div className="flex gap-1.5"><i className="h-3 w-3 rounded-full bg-red-500/70" /><i className="h-3 w-3 rounded-full bg-amber/70" /><i className="h-3 w-3 rounded-full bg-emerald-500/70" /></div>
               <span className="flex items-center gap-1.5 font-mono text-xs text-emerald-400"><span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-400" />LIVE</span>
@@ -74,7 +74,7 @@ export default function Inventory() {
                   <div key={r.sku} className="grid grid-cols-[1fr_auto] items-center gap-x-4 gap-y-2 px-4 py-3 sm:grid-cols-[6.5rem_1fr_9rem_3.5rem]">
                     <span className="hidden font-mono text-xs text-zinc-500 sm:block">{r.sku}</span>
                     <span className="truncate">{r.name}</span>
-                    <div className="col-span-2 h-1.5 overflow-hidden rounded-full bg-white/10 sm:col-span-1">
+                    <div className="col-span-2 h-1.5 overflow-hidden rounded-full bg-fg/10 sm:col-span-1">
                       <motion.div animate={{ width: `${pct}%` }} transition={{ type: 'spring', stiffness: 80, damping: 18 }} className={`h-full rounded-full ${low ? 'bg-ember' : 'bg-emerald-400'}`} />
                     </div>
                     <AnimatePresence mode="popLayout">
@@ -84,7 +84,7 @@ export default function Inventory() {
                 )
               })}
             </div>
-            <button onClick={() => setRows(initial)} className="mt-4 flex items-center gap-1.5 text-xs text-zinc-500 hover:text-white"><Check size={14} /> Reset demo data</button>
+            <button onClick={() => setRows(initial)} className="mt-4 flex items-center gap-1.5 text-xs text-zinc-500 hover:text-fg"><Check size={14} /> Reset demo data</button>
           </div>
         </Reveal>
       </div>
